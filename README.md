@@ -2,6 +2,8 @@
 
 Web Engineering Open-Ended Lab, Mid Evaluation frontend.
 
+**GitHub Repository:** [https://github.com/hanzalahk360-commits/PaaniLink](https://github.com/hanzalahk360-commits/PaaniLink)
+
 ## 1. Requirements
 
 - Install Node.js 18 or later.

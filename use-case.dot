@@ -1,0 +1,40 @@
+digraph PaaniLinkUseCases {
+  graph [rankdir=LR, bgcolor="white", pad="0.25", nodesep="0.28", ranksep="0.7", splines=true, fontname="Arial", label="PaaniLink Water Tanker Booking and Dispatch System\nUse Case Diagram", labelloc=t, fontsize=20];
+  node [fontname="Arial", fontsize=10, color="#31515B", fontcolor="#17313A"];
+  edge [color="#526D75", penwidth=1.1, arrowsize=0.65];
+
+  customer [shape=plaintext, label=" O\n/|\\\n/ \\\nCustomer"];
+  officer [shape=plaintext, label=" O\n/|\\\n/ \\\nZone Officer"];
+  operator [shape=plaintext, label=" O\n/|\\\n/ \\\nHydrant Operator"];
+  driver [shape=plaintext, label=" O\n/|\\\n/ \\\nDriver"];
+  admin [shape=plaintext, label=" O\n/|\\\n/ \\\nAdministrator"];
+
+  subgraph cluster_system {
+    label="PaaniLink System"; color="#31515B"; penwidth=1.5; style="rounded";
+    node [shape=ellipse, style="filled", fillcolor="#EEF5F4", margin="0.13,0.08"];
+    c1 [label="Register / Log in"];
+    c2 [label="Apply for subsidy"];
+    c3 [label="Book tanker"];
+    c4 [label="View own bookings and bills"];
+    c5 [label="Cancel booking"];
+    c6 [label="Confirm or dispute delivery"];
+    o1 [label="Verify subsidy application"];
+    o2 [label="Approve / reject booking"];
+    o3 [label="View zone bookings"];
+    o4 [label="Resolve delivery dispute"];
+    h1 [label="View hydrant bookings"];
+    h2 [label="Assign tanker and driver"];
+    h3 [label="Record filling and dispatch"];
+    h4 [label="Set hydrant / tanker availability"];
+    d1 [label="View assigned trips"];
+    d2 [label="Mark arrived / delivered / failed"];
+    a1 [label="Update rates and hydrant quota"];
+    a2 [label="View city reports and records"];
+  }
+
+  customer -> {c1 c2 c3 c4 c5 c6};
+  officer -> {o1 o2 o3 o4};
+  operator -> {h1 h2 h3 h4};
+  driver -> {d1 d2};
+  admin -> {a1 a2};
+}

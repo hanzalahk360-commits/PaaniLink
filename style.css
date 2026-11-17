@@ -1,0 +1,41 @@
+:root{--ink:#12232B;--deep:#0F3B4C;--bg:#F1F5F4;--line:#C5D3D0;--brass:#C77700;--ok:#1B6B45;--bad:#A3281F}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:.5rem;padding:.75rem 1rem;background:var(--deep);color:#fff}
+.brand{font:700 1.3rem Georgia,serif;color:#fff;text-decoration:none}
+#who{display:flex;align-items:center;gap:.75rem}
+main{max-width:1000px;margin:0 auto;padding:1rem}
+h1,h2{font-family:Georgia,serif;color:var(--deep);line-height:1.2}
+form{display:grid;grid-template-columns:1fr;gap:.4rem;background:#fff;border:1px solid var(--line);border-radius:6px;padding:1rem;margin-bottom:1rem}
+form h2{margin:0}
+label{font-weight:600;margin-top:.4rem}
+input,select{font:inherit;padding:.65rem;border:1px solid #7C918D;border-radius:4px;background:#fff;min-height:44px;width:100%}
+button{font:inherit;font-weight:600;min-height:44px;padding:.5rem 1rem;border:2px solid var(--deep);border-radius:4px;background:var(--deep);color:#fff;cursor:pointer}
+button.ghost{background:transparent;color:var(--deep)}
+#who .ghost{color:#fff;border-color:#fff}
+button.danger{background:var(--bad);border-color:var(--bad)}
+:focus-visible{outline:3px solid var(--brass);outline-offset:2px}
+#msg{min-height:1.5rem;font-weight:600;margin:.25rem 0}
+#msg.ok{color:var(--ok)}#msg.err{color:var(--bad)}
+.grid{display:grid;gap:.75rem;grid-template-columns:1fr;margin-bottom:1rem}
+.card{background:#fff;border:1px solid var(--line);border-left:5px solid var(--brass);border-radius:6px;padding:.9rem}
+.card header{display:flex;justify-content:space-between;gap:.5rem;align-items:flex-start}
+.card h3{margin:0;font-size:1.05rem}
+dl{display:grid;grid-template-columns:auto 1fr;gap:.2rem .75rem;margin:.6rem 0}
+dt{color:#4A6068}dd{margin:0}
+.acts{display:grid;gap:.4rem}
+.tag{font-size:.85rem;font-weight:700;padding:.1rem .6rem;border-radius:99px;background:#DDE8E6;white-space:nowrap}
+.s-Approved,.s-Confirmed,.s-Delivered,.s-Resolved{background:#CFEBDD}
+.s-Pending,.s-Assigned,.s-Dispatched,.s-Arrived{background:#FBE4B8}
+.s-Rejected,.s-Cancelled,.s-Failed,.s-Disputed{background:#F3CFCB}
+.stat{display:inline-block;margin:0 1.5rem .5rem 0}.stat strong{display:block;font:700 1.8rem Georgia,serif;color:var(--deep)}
+.scroll{overflow-x:auto;margin-bottom:1rem}
+table{border-collapse:collapse;width:100%;background:#fff}
+th,td{text-align:left;padding:.5rem .7rem;border-bottom:1px solid var(--line)}
+th{background:#E3ECEA}
+form button{grid-column:1/-1}
+@media(min-width:700px){.grid{grid-template-columns:repeat(2,1fr)}form{grid-template-columns:1fr 2fr;align-items:center}form h2{grid-column:1/-1}label{margin:0}}
+@media(min-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}}
+textarea{font:inherit;padding:.65rem;border:1px solid #7C918D;border-radius:4px;background:#fff;min-height:90px;width:100%;resize:vertical}
+button:disabled{opacity:.65;cursor:wait}
+@media(max-width:380px){.top{align-items:flex-start;flex-direction:column}.card header{flex-wrap:wrap}main{padding:.75rem}.acts button{width:100%}}

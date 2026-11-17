@@ -1,0 +1,196 @@
+{
+  "zones": [
+    {
+      "id": 1,
+      "name": "Gulshan",
+      "hydrantId": 1
+    },
+    {
+      "id": 2,
+      "name": "Korangi",
+      "hydrantId": 2
+    }
+  ],
+  "hydrants": [
+    {
+      "id": 1,
+      "name": "Gulshan Hydrant",
+      "quota": 30000,
+      "hours": "6am to 6pm",
+      "available": true
+    },
+    {
+      "id": 2,
+      "name": "Korangi Hydrant",
+      "quota": 20000,
+      "hours": "7am to 5pm",
+      "available": true
+    }
+  ],
+  "tankers": [
+    {
+      "id": 1,
+      "plate": "KHI-1001",
+      "capacity": 1000,
+      "hydrantId": 1,
+      "available": true
+    },
+    {
+      "id": 2,
+      "plate": "KHI-3001",
+      "capacity": 3000,
+      "hydrantId": 1,
+      "available": true
+    },
+    {
+      "id": 3,
+      "plate": "KHI-6001",
+      "capacity": 6000,
+      "hydrantId": 1,
+      "available": true
+    },
+    {
+      "id": 4,
+      "plate": "KHI-3002",
+      "capacity": 3000,
+      "hydrantId": 2,
+      "available": true
+    }
+  ],
+  "rates": [
+    {
+      "id": 1,
+      "size": 1000,
+      "commercial": 3000,
+      "subsidised": 800
+    },
+    {
+      "id": 2,
+      "size": 3000,
+      "commercial": 7500,
+      "subsidised": 2000
+    },
+    {
+      "id": 3,
+      "size": 6000,
+      "commercial": 14000,
+      "subsidised": 3800
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Ali Raza",
+      "role": "customer",
+      "cnic": "4210112345671",
+      "phone": "03001234567",
+      "address": "House 12, Block 5, Gulshan",
+      "zoneId": 1,
+      "subsidyStatus": "Approved",
+      "monthlyLimit": 2
+    },
+    {
+      "id": 2,
+      "name": "Sana Malik",
+      "role": "customer",
+      "cnic": "4210112345672",
+      "phone": "03111234567",
+      "address": "Flat 4, Sunrise Apartments, Gulshan",
+      "zoneId": 1,
+      "subsidyStatus": "None",
+      "monthlyLimit": 2
+    },
+    {
+      "id": 3,
+      "name": "Bilal Ahmed",
+      "role": "officer",
+      "zoneId": 1
+    },
+    {
+      "id": 4,
+      "name": "Kamran Shah",
+      "role": "operator",
+      "hydrantId": 1,
+      "zoneId": 1
+    },
+    {
+      "id": 5,
+      "name": "Usman Khan",
+      "role": "driver",
+      "hydrantId": 1
+    },
+    {
+      "id": 6,
+      "name": "Hassan Ali",
+      "role": "driver",
+      "hydrantId": 1
+    },
+    {
+      "id": 7,
+      "name": "Admin Water Board",
+      "role": "admin"
+    }
+  ],
+  "bookings": [
+    {
+      "id": 1,
+      "customerId": 1,
+      "zoneId": 1,
+      "hydrantId": 1,
+      "size": 3000,
+      "type": "Subsidised",
+      "date": "2026-11-20",
+      "address": "House 12, Block 5, Gulshan",
+      "price": 2000,
+      "status": "Approved",
+      "tankerId": null,
+      "driverId": null,
+      "note": ""
+    },
+    {
+      "id": 2,
+      "customerId": 2,
+      "zoneId": 1,
+      "hydrantId": 1,
+      "size": 1000,
+      "type": "Commercial",
+      "date": "2026-11-20",
+      "address": "Flat 4, Sunrise Apartments, Gulshan",
+      "price": 3000,
+      "status": "Approved",
+      "tankerId": null,
+      "driverId": null,
+      "note": ""
+    },
+    {
+      "id": 3,
+      "customerId": 1,
+      "zoneId": 1,
+      "hydrantId": 1,
+      "size": 1000,
+      "type": "Commercial",
+      "date": "2026-11-18",
+      "address": "House 12, Block 5, Gulshan",
+      "price": 3000,
+      "status": "Delivered",
+      "tankerId": 1,
+      "driverId": 5,
+      "note": ""
+    },
+    {
+      "customerId": 1,
+      "zoneId": 1,
+      "hydrantId": 1,
+      "size": 1000,
+      "type": "Subsidised",
+      "date": "2026-11-25",
+      "address": "house e 548 korangi",
+      "price": 800,
+      "status": "Cancelled",
+      "tankerId": null,
+      "driverId": null,
+      "note": "",
+      "id": 4
+    }
+  ]
+}
